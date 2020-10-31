@@ -9,30 +9,17 @@
         </div>
       </form>
       <div class="todo-list">
-        <div class="tile" v-for="t in todos" :key="t.id">
-          <div class="tile-icon">
-            <div>
-              <i class="icon icon-time centered"></i>
-            </div>
-          </div>
-          <div class="tile-content">
-            <p class="tile-subtitle">{{ t.description }}</p>
-          </div>
-          <div class="tile-action">
-            <button class="btn btn-link">Concluído</button>
-            <button class="btn btn-link">
-              <span class="text-error">Remover</span>
-            </button>
-        </div>
+        <todo v-for="t in todos" :key="t.id" :todo="t" />
       </div>
     </div>
-  </div>
   </div>
 </template>
 
 <script>
+import Todo from './components/Todo'
 export default {
   name: "App",
+  components: { Todo },
   data() {
     return { todos: [], todo: { checked: false } };
   },
