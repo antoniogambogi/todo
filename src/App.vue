@@ -1,7 +1,8 @@
 <template>
   <div class="" id="app">
     <div class="container grid-xs py-2">
-      Hello Vue
+      <img class="img-responsive img-logo" src="@/assets/logo.png" alt="logo Vue">
+      
     </div>
   </div>
 </template>
@@ -12,4 +13,9 @@ export default {
 };
 </script>
 
-
+<style scoped>
+.img-logo {
+  max-width: 100px;
+  margin: 0 auto;
+}
+</style>
